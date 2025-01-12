@@ -35,15 +35,14 @@ export const StateProvider: FC<StateProviderProps> = ({ children }) => {
 };
 
 const useUserId = () => {
-  const [userId, setUserId] = useState<string | undefined>(undefined);
+  const [userId, setUserId] = useState("");
 
   useEffect(() => {
     const fetchUserData = async () => {
       const user = await supabaseClient.auth.getUser();
       const userId = user.data.user?.id;
 
-      console.log("userId", userId);
-      setUserId(userId);
+      setUserId(userId || "undefined");
     };
 
     fetchUserData();

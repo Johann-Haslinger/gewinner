@@ -14,7 +14,7 @@ const App = () => {
     <BrowserRouter>
       <ThemeColorSwitcher />
 
-      {!userId ? (
+      {userId == "undefined" ? (
         <Login />
       ) : (
         <div>

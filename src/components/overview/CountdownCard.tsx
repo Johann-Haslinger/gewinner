@@ -33,7 +33,7 @@ const CountdownCard = () => {
 export default CountdownCard;
 
 const useTargetDate = () => {
-  return "2026-12-24T00:00:00";
+  return "2026-07-15T00:00:00";
 };
 
 const useTimeLeft = (targetDate: string) => {
