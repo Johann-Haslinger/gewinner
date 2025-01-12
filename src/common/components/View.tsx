@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 const View = ({ children }: PropsWithChildren) => {
-  return <div className="container bg-white dark:bg-black p-4 h-screen">{children}</div>;
+  return <div className="container bg-white dark:bg-black p-4 h-screen overflow-y-scroll pb-40">{children}</div>;
 };
 
 export default View;

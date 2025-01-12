@@ -3,8 +3,8 @@ import { useEffect } from "react";
 export const useDisableScrollAndZoom = () => {
   useEffect(() => {
     // Funktion zum Deaktivieren des Scrollens
-    const preventScroll = (event: Event) => {
-      event.preventDefault();
+    const preventScroll = () => {
+      // event.preventDefault();
     };
 
     // Funktion zum Deaktivieren des Zoomens
@@ -29,4 +29,3 @@ export const useDisableScrollAndZoom = () => {
     };
   }, []);
 };
-

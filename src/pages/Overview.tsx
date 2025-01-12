@@ -1,5 +1,5 @@
 import { Header, View } from "../common/components";
-import { CountdownCard, SavingsCard } from "../components/overview";
+import { CountdownCard, SavingsCard, ToDoCard } from "../components/overview";
 
 const Overview = () => {
   return (
@@ -7,6 +7,7 @@ const Overview = () => {
       <Header title="Overview" subtitle="Welcome to your dashboard" />
       <CountdownCard />
       <SavingsCard />
+      <ToDoCard />
     </View>
   );
 };
