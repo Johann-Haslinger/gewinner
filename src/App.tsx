@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router";
+import { useDisableScrollAndZoom } from "./common/hooks";
 import { BudgetTracker, Journal, Notes, NotFound, Overview, TripPlanner } from "./pages";
 
 const App = () => {
+  useDisableScrollAndZoom();
+
   return (
     <div>
       <BrowserRouter>
