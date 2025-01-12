@@ -1,27 +1,28 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { ThemeColorSwitcher } from "./common/components";
-import { useDisableScrollAndZoom } from "./common/hooks";
+import { useDisableZoomAndScroll } from "./common/hooks";
+import { TabBar } from "./components/navigation";
 import { BudgetTracker, Journal, Notes, NotFound, Overview, TripPlanner } from "./pages";
 
 const App = () => {
-  useDisableScrollAndZoom();
+  useDisableZoomAndScroll();
 
   return (
-    <div>
+    <BrowserRouter>
       <ThemeColorSwitcher />
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Overview />} />
-          <Route path="/journal" element={<Journal />} />
-          <Route path="/trip-planner" element={<TripPlanner />} />
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/budget-tracker" element={<BudgetTracker />} />
+      <Routes>
+        <Route path="/" element={<Overview />} />
+        <Route path="/journal" element={<Journal />} />
+        <Route path="/trip-planner" element={<TripPlanner />} />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/budget-tracker" element={<BudgetTracker />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      <TabBar />
+    </BrowserRouter>
   );
 };
 

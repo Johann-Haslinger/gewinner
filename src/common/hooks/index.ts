@@ -1,1 +1,1 @@
-export * from "./useDisableScrollAndZoom";
+export * from "./useDisableZoomAndScroll";
