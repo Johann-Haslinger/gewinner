@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import { useDisableScrollAndZoom, useThemeColorSwitcher } from "./common/hooks";
+import { ThemeColorSwitcher } from "./common/components";
+import { useDisableScrollAndZoom } from "./common/hooks";
 import { BudgetTracker, Journal, Notes, NotFound, Overview, TripPlanner } from "./pages";
 
 const App = () => {
   useDisableScrollAndZoom();
-  useThemeColorSwitcher();
 
   return (
     <div>
+      <ThemeColorSwitcher />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Overview />} />
