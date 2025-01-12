@@ -1,4 +1,5 @@
-import { FC, createContext, useContext, useState } from "react";
+import { FC, createContext, useContext, useEffect, useState } from "react";
+import supabaseClient from "../lib/supabase";
 
 interface StateContextType {
   isScreenOverlayVisible: boolean;
@@ -34,5 +35,19 @@ export const StateProvider: FC<StateProviderProps> = ({ children }) => {
 };
 
 const useUserId = () => {
-  return "123";
+  const [userId, setUserId] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const user = await supabaseClient.auth.getUser();
+      const userId = user.data.user?.id;
+
+      console.log("userId", userId);
+      setUserId(userId);
+    };
+
+    fetchUserData();
+  }, []);
+
+  return userId;
 };

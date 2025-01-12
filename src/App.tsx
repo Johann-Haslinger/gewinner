@@ -10,23 +10,27 @@ const App = () => {
 
   useDisableZoomAndScroll();
 
-  return userId ? (
-    <Login />
-  ) : (
+  return (
     <BrowserRouter>
       <ThemeColorSwitcher />
 
-      <Routes>
-        <Route path="/" element={<Overview />} />
-        <Route path="/journal" element={<Journal />} />
-        <Route path="/trip-planner" element={<TripPlanner />} />
-        <Route path="/notes" element={<Notes />} />
-        <Route path="/budget-tracker" element={<BudgetTracker />} />
+      {!userId ? (
+        <Login />
+      ) : (
+        <div>
+          <Routes>
+            <Route path="/" element={<Overview />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/trip-planner" element={<TripPlanner />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/budget-tracker" element={<BudgetTracker />} />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-      <TabBar />
+          <TabBar />
+        </div>
+      )}
     </BrowserRouter>
   );
 };
