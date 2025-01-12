@@ -1,0 +1,16 @@
+{
+  "name": "Momentum",
+  "short_name": "Momentum",
+  "description": "Momentum PWA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "momentum.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
