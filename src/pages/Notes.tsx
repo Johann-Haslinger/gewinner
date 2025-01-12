@@ -1,5 +1,7 @@
+import { View } from "../common/components";
+
 const Notes = () => {
-  return <div>Notes</div>;
+  return <View></View>;
 };
 
 export default Notes;

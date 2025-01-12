@@ -1,5 +1,7 @@
+import { View } from "../common/components";
+
 const BudgetTracker = () => {
-  return <div>BudgetTracker</div>;
+  return <View></View>;
 };
 
 export default BudgetTracker;

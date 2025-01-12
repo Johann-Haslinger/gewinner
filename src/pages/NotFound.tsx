@@ -1,5 +1,7 @@
+import { View } from "../common/components";
+
 const NotFound = () => {
-  return <div>NotFound</div>;
+  return <View>404</View>;
 };
 
 export default NotFound;

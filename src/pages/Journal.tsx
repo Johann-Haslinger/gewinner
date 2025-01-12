@@ -1,5 +1,7 @@
+import { View } from "../common/components";
+
 const Journal = () => {
-  return <div>Journal</div>;
+  return <View></View>;
 };
 
 export default Journal;

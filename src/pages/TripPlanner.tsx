@@ -1,5 +1,7 @@
+import { View } from "../common/components";
+
 const TripPlanner = () => {
-  return <div>TripPlanner</div>;
+  return <View></View>;
 };
 
 export default TripPlanner;
