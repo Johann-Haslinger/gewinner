@@ -3,6 +3,11 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const TABS = [
   {
+    link: "/budget-tracker",
+    icon: <IoWallet />,
+    title: "Budget",
+  },
+  {
     link: "/trip-planner",
     icon: <IoMap />,
     title: "Planer",
@@ -13,19 +18,14 @@ const TABS = [
     title: "Übersicht",
   },
   {
-    link: "/budget-tracker",
-    icon: <IoWallet />,
-    title: "Budget",
+    link: "/notes",
+    icon: <IoList />,
+    title: "Notizen",
   },
   {
     link: "/journal",
     icon: <IoJournal />,
     title: "Journal",
-  },
-  {
-    link: "/notes",
-    icon: <IoList />,
-    title: "Notizen",
   },
 ];
 
