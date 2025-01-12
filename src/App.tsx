@@ -2,12 +2,17 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { ThemeColorSwitcher } from "./common/components";
 import { useDisableZoomAndScroll } from "./common/hooks";
 import { TabBar } from "./components/navigation";
-import { BudgetTracker, Journal, Notes, NotFound, Overview, TripPlanner } from "./pages";
+import { useStateContext } from "./contexts";
+import { BudgetTracker, Journal, Login, Notes, NotFound, Overview, TripPlanner } from "./pages";
 
 const App = () => {
+  const { userId } = useStateContext();
+
   useDisableZoomAndScroll();
 
-  return (
+  return userId ? (
+    <Login />
+  ) : (
     <BrowserRouter>
       <ThemeColorSwitcher />
 
