@@ -5,7 +5,7 @@ const CountdownCard = () => {
   const timeLeft = useTimeLeft(targetDate);
 
   return (
-    <div className="bg-indigo-600 bg-opacity-10 border border-indigo-600 border-opacity-15 rounded-lg p-6 max-w-sm w-full">
+    <div className="bg-indigo-600 my-3 bg-opacity-10 border border-indigo-600 border-opacity-15 rounded-xl p-6 max-w-sm w-full">
       <div className="flex justify-between items-center">
         <div className="items-end space-x-2">
           <span className="block text-7xl leading-[5rem] font-bold text-indigo-600">{timeLeft.days}</span>
